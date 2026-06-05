@@ -4,7 +4,7 @@ const headerContainer = document.createElement("div");
 headerContainer.className = "header-container";
 
 const headerLeft = document.createElement("div");
-headerLeft.className = "header-container";
+headerLeft.className = "header-left";
 
 const headerLogo = document.createElement("img");
 headerLogo.src = "/logo.png";
@@ -17,3 +17,17 @@ headerLeft.appendChild(headerTitle);
 
 const headerRight = document.createElement("div");
 headerRight.className = "header-right";
+
+const headerButton = document.createElement("button");
+headerButton.className = "header-button";
+headerButton.textContent = "Home";
+
+headerButton.addEventListener("click", () => {
+  window.location = "/";
+});
+
+headerRight.appendChild(headerButton);
+
+headerContainer.appendChild(headerLeft);
+headerContainer.appendChild(headerRight);
+header.appendChild(headerContainer);
